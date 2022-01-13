@@ -11,8 +11,8 @@ const Stack = createStackNavigator();
 
 const SearchStack = () => (
   <Stack.Navigator
-    headerMode="none"
     screenOptions={{
+      headerShown: false,
       cardStyle: {
         backgroundColor: 'white',
       },

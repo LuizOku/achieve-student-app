@@ -22,6 +22,7 @@ const AppTabs = () => (
     <Tabs.Screen
       name="courses"
       options={() => ({
+        headerShown: false,
         tabBarVisible: true,
         title: 'Courses',
         tabBarIcon: ({ focused }) => (
@@ -37,6 +38,7 @@ const AppTabs = () => (
     <Tabs.Screen
       name="search"
       options={() => ({
+        headerShown: false,
         tabBarVisible: true,
         title: 'Enroll',
         tabBarIcon: ({ focused }) => (
@@ -52,6 +54,7 @@ const AppTabs = () => (
     <Tabs.Screen
       name="profile"
       options={() => ({
+        headerShown: false,
         tabBarVisible: true,
         title: 'Perfil',
         tabBarIcon: ({ focused }) => (

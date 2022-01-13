@@ -29,7 +29,7 @@ const App = ({ skipLoadingScreen }) => {
     const loadResourcesAndDataAsync = async () => {
       try {
         // Cache the images here:
-        const images = [];
+        const images = [require('./assets/achieve-icon.png')];
         const cacheImages = images.map((image) =>
           Asset.fromModule(image).downloadAsync()
         );

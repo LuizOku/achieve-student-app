@@ -4,7 +4,7 @@ import colors from '../../utils/colors';
 
 export const Container = styled.View`
   position: absolute;
-  top: 50;
+  bottom: 50px;
   left: 0;
   width: 100%;
   justify-content: center;

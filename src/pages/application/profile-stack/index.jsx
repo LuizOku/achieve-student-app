@@ -11,8 +11,8 @@ const Stack = createStackNavigator();
 
 const ProfileStack = () => (
   <Stack.Navigator
-    headerMode="none"
     screenOptions={{
+      headerShown: false,
       cardStyle: {
         backgroundColor: 'white',
       },

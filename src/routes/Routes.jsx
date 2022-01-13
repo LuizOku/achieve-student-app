@@ -16,14 +16,15 @@ const Stack = createStackNavigator();
 
 const Routes = ({ containerRef, initialNavigationState }) => {
   const { token } = useSelector((state) => state.auth);
+  console.log(token);
   return (
     <NavigationContainer
       ref={containerRef}
       initialState={initialNavigationState}
     >
       <Stack.Navigator
-        headerMode="none"
         screenOptions={{
+          headerShown: false,
           cardStyle: {
             backgroundColor: colors.WHITE,
           },
