@@ -11,7 +11,8 @@
     "prettier": "prettier --write \"**/*.{js,jsx}\"",
     "eslint:watch": "esw -w \"**/*.{js,jsx}\" --color --clear --fix",
     "loginToExpo": "expo login -u luiz.macmillan -p 1qaz@wsx3edcC",
-    "publishToExpo": "expo publish --non-interactive --release-channel development --target managed",
+    "publishToExpoTest": "expo publish --non-interactive --release-channel qa --target managed",
+    "publishToExpoDev": "expo publish --non-interactive --release-channel development --target managed",
     "buildAndroidApk": "expo build:android -t apk",
     "buildAndroid": "expo build:android --non-interactive --release-channel production",
     "buildIos": "expo build:ios --non-interactive --release-channel production"
