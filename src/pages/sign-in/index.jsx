@@ -93,7 +93,7 @@ function SignIn() {
                 value={values.password}
                 onChangeText={handleChange('password')}
                 onBlur={handleBlur('password')}
-                placeholder="Senha"
+                placeholder="Password"
                 secureTextEntry
                 autoCapitalize="none"
                 error={errors?.password || ''}

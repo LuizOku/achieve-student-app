@@ -10,6 +10,7 @@ const colors = {
   LIGHT_GRAY: '#A7A6A233',
   WHITE: '#FFFFFF',
   BLACK: '#000000',
+  AQUA_BASE: '#00758e',
 };
 
 export default colors;
