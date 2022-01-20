@@ -19,7 +19,7 @@ if (__DEV__) {
 
 const navigationRef = createRef();
 
-const App = ({ skipLoadingScreen }) => {
+function App({ skipLoadingScreen }) {
   const dispatch = useDispatch();
   const { snackbar } = useSelector((state) => state.app);
 
@@ -66,7 +66,7 @@ const App = ({ skipLoadingScreen }) => {
       )}
     </>
   );
-};
+}
 
 export default registerRootComponent((props) => (
   <Provider store={store}>

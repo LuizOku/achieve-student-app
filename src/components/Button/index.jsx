@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import colors from '../../utils/colors';
 import { TouchableOpacity, Text } from './styles.css';
 
-const Button = ({
+function Button({
   children,
   disabled,
   onPress,
@@ -18,26 +18,28 @@ const Button = ({
   style,
   className,
   fullWidth,
-}) => (
-  <TouchableOpacity
-    disabled={disabled}
-    outlined={outlined}
-    background={background}
-    color={color}
-    onPress={loading ? null : onPress}
-    style={style}
-    className={className}
-    fullWidth={fullWidth}
-  >
-    {loading ? (
-      <ActivityIndicator color={color} />
-    ) : (
-      <Text noUppercase={noUppercase} color={color}>
-        {children}
-      </Text>
-    )}
-  </TouchableOpacity>
-);
+}) {
+  return (
+    <TouchableOpacity
+      disabled={disabled}
+      outlined={outlined}
+      background={background}
+      color={color}
+      onPress={loading ? null : onPress}
+      style={style}
+      className={className}
+      fullWidth={fullWidth}
+    >
+      {loading ? (
+        <ActivityIndicator color={color} />
+      ) : (
+        <Text noUppercase={noUppercase} color={color}>
+          {children}
+        </Text>
+      )}
+    </TouchableOpacity>
+  );
+}
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,

@@ -61,6 +61,8 @@ module.exports = {
     'react/style-prop-object': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/no-unstable-nested-components': 'off',
+    'default-param-last': 'off',
     'import-helpers/order-imports': [
       'warn',
       {

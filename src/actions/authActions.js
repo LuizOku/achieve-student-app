@@ -1,4 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { auth } from './types';
 
 export const setToken = (obj) => async (dispatch) => {

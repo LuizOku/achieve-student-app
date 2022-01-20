@@ -9,18 +9,20 @@ import Profile from './profile';
 
 const Stack = createStackNavigator();
 
-const ProfileStack = () => (
-  <Stack.Navigator
-    screenOptions={{
-      headerShown: false,
-      cardStyle: {
-        backgroundColor: 'white',
-      },
-      ...TransitionPresets.SlideFromRightIOS,
-    }}
-  >
-    <Stack.Screen name="profile" component={Profile} />
-  </Stack.Navigator>
-);
+function ProfileStack() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        cardStyle: {
+          backgroundColor: 'white',
+        },
+        ...TransitionPresets.SlideFromRightIOS,
+      }}
+    >
+      <Stack.Screen name="profile" component={Profile} />
+    </Stack.Navigator>
+  );
+}
 
 export default ProfileStack;

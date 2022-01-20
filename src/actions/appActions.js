@@ -1,3 +1,5 @@
+import { resetToken } from './authActions';
+import { resetMe } from './studentActions';
 import { app } from './types';
 
 export const setSnackbar = (obj) => async (dispatch) =>
@@ -13,4 +15,6 @@ export const resetSnackbar = () => async (dispatch) =>
 
 export const resetApp = () => (dispatch) => {
   dispatch(resetSnackbar());
+  dispatch(resetToken());
+  dispatch(resetMe());
 };

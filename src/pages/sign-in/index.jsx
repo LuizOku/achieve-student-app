@@ -13,7 +13,7 @@ import env from '../../config/env';
 import colors from '../../utils/colors';
 import { Container, FormContainer, Version } from './styles.css';
 
-const SignIn = () => {
+function SignIn() {
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
@@ -27,6 +27,7 @@ const SignIn = () => {
       school: 'Harvard',
       email: 'luiz.oku.contractor@macmillan.com',
     };
+    console.log(values);
     const token = 'Bearer iosfdniosdfiosdnfoinsdiofhaosfjaoisfhaiodfoidf';
     dispatch(setMe(me));
     dispatch(setToken(token));
@@ -118,6 +119,6 @@ const SignIn = () => {
       </Container>
     </ScreenContainer>
   );
-};
+}
 
 export default SignIn;

@@ -9,18 +9,20 @@ import SearchCourse from './search-course';
 
 const Stack = createStackNavigator();
 
-const SearchStack = () => (
-  <Stack.Navigator
-    screenOptions={{
-      headerShown: false,
-      cardStyle: {
-        backgroundColor: 'white',
-      },
-      ...TransitionPresets.SlideFromRightIOS,
-    }}
-  >
-    <Stack.Screen name="search-course" component={SearchCourse} />
-  </Stack.Navigator>
-);
+function SearchStack() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        cardStyle: {
+          backgroundColor: 'white',
+        },
+        ...TransitionPresets.SlideFromRightIOS,
+      }}
+    >
+      <Stack.Screen name="search-course" component={SearchCourse} />
+    </Stack.Navigator>
+  );
+}
 
 export default SearchStack;

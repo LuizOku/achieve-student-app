@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import colors from '../../utils/colors';
 import { Container, Error, TextInput } from './styles.css';
 
-const Input = ({
+function Input({
   value,
   onChangeText,
   onBlur,
@@ -17,25 +17,27 @@ const Input = ({
   maxLength,
   error,
   style,
-}) => (
-  <Container editable={editable} style={style}>
-    <TextInput
-      secureTextEntry={secureTextEntry}
-      placeholder={placeholder}
-      value={value}
-      onChangeText={onChangeText}
-      onBlur={onBlur}
-      editable={editable}
-      autoCorrect={false}
-      keyboardType={keyboardType}
-      autoCapitalize={autoCapitalize}
-      maxLength={maxLength}
-      placeholderTextColor={colors.GRAY}
-      error={error}
-    />
-    {error !== '' && <Error>{error}</Error>}
-  </Container>
-);
+}) {
+  return (
+    <Container editable={editable} style={style}>
+      <TextInput
+        secureTextEntry={secureTextEntry}
+        placeholder={placeholder}
+        value={value}
+        onChangeText={onChangeText}
+        onBlur={onBlur}
+        editable={editable}
+        autoCorrect={false}
+        keyboardType={keyboardType}
+        autoCapitalize={autoCapitalize}
+        maxLength={maxLength}
+        placeholderTextColor={colors.GRAY}
+        error={error}
+      />
+      {error !== '' && <Error>{error}</Error>}
+    </Container>
+  );
+}
 
 Input.propTypes = {
   value: PropTypes.string.isRequired,

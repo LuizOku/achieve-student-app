@@ -3,8 +3,8 @@ import { View } from 'react-native';
 
 // import { Container } from './styles';
 
-const SearchCourse = () => {
+function SearchCourse() {
   return <View />;
-};
+}
 
 export default SearchCourse;

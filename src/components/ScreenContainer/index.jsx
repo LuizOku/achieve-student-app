@@ -13,7 +13,7 @@ import {
   InsideTouchableWithoutFeedbackContainer,
 } from './styles.css';
 
-const ScreenContainer = ({
+function ScreenContainer({
   background,
   backgroundMode,
   backgroundColor,
@@ -23,46 +23,48 @@ const ScreenContainer = ({
   className,
   keyboardAvoiding,
   noPadding,
-}) => (
-  <>
-    <StatusBar
-      barStyle={mapBarStyle(statusBarMode)}
-      translucent
-      backgroundColor="rgba(0, 0, 0, 0.2)"
-    />
-    {typeof background === 'number' ? (
-      <ImageBackground
-        source={background}
-        resizeMode={backgroundMode}
-        backgroundColor={backgroundColor}
+}) {
+  return (
+    <>
+      <StatusBar
+        barStyle={mapBarStyle(statusBarMode)}
+        translucent
+        backgroundColor="rgba(0, 0, 0, 0.2)"
       />
-    ) : (
-      <ColorBackground color={backgroundColor} />
-    )}
-    {keyboardAvoiding ? (
-      <KeyboardAwareScrollView
-        keyboardShouldPersistTaps="always"
-        contentContainerStyle={{
-          flex: 1,
-          flexGrow: 1,
-          paddingHorizontal: noPadding ? 0 : 15,
-          paddingBottom: 0,
-          backgroundColor: backgroundColor || 'transparent',
-          paddingTop: Constants.statusBarHeight,
-          ...style,
-        }}
-      >
-        <InsideTouchableWithoutFeedbackContainer>
+      {typeof background === 'number' ? (
+        <ImageBackground
+          source={background}
+          resizeMode={backgroundMode}
+          backgroundColor={backgroundColor}
+        />
+      ) : (
+        <ColorBackground color={backgroundColor} />
+      )}
+      {keyboardAvoiding ? (
+        <KeyboardAwareScrollView
+          keyboardShouldPersistTaps="always"
+          contentContainerStyle={{
+            flex: 1,
+            flexGrow: 1,
+            paddingHorizontal: noPadding ? 0 : 15,
+            paddingBottom: 0,
+            backgroundColor: backgroundColor || 'transparent',
+            paddingTop: Constants.statusBarHeight,
+            ...style,
+          }}
+        >
+          <InsideTouchableWithoutFeedbackContainer>
+            {children}
+          </InsideTouchableWithoutFeedbackContainer>
+        </KeyboardAwareScrollView>
+      ) : (
+        <Container style={style} noPadding={noPadding} className={className}>
           {children}
-        </InsideTouchableWithoutFeedbackContainer>
-      </KeyboardAwareScrollView>
-    ) : (
-      <Container style={style} noPadding={noPadding} className={className}>
-        {children}
-      </Container>
-    )}
-  </>
-);
+        </Container>
+      )}
+    </>
+  );
+}
 
 ScreenContainer.propTypes = {
   children: PropTypes.node.isRequired,

@@ -7,6 +7,7 @@ const colors = {
   INFO: '#3A60B7',
   GRAY: '#A7A6A2',
   DARK_GRAY: '#212121',
+  LIGHT_GRAY: '#A7A6A233',
   WHITE: '#FFFFFF',
   BLACK: '#000000',
 };

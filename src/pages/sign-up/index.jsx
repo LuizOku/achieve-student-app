@@ -11,7 +11,7 @@ import useSnackbar from '../../hooks/useSnackBar';
 import colors from '../../utils/colors';
 import { Container, FormContainer } from './styles.css';
 
-const SignUp = () => {
+function SignUp() {
   const snackbar = useSnackbar();
   const navigation = useNavigation();
 
@@ -150,6 +150,6 @@ const SignUp = () => {
       </Container>
     </ScreenContainer>
   );
-};
+}
 
 export default SignUp;

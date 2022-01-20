@@ -3,8 +3,8 @@ import { View } from 'react-native';
 
 // import { Container } from './styles';
 
-const Courses = () => {
+function Courses() {
   return <View />;
-};
+}
 
 export default Courses;

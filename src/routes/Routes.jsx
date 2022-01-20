@@ -14,7 +14,7 @@ import colors from '../utils/colors';
 
 const Stack = createStackNavigator();
 
-const Routes = ({ containerRef, initialNavigationState }) => {
+function Routes({ containerRef, initialNavigationState }) {
   const { token } = useSelector((state) => state.auth);
   console.log(token);
   return (
@@ -46,6 +46,6 @@ const Routes = ({ containerRef, initialNavigationState }) => {
       </Stack.Navigator>
     </NavigationContainer>
   );
-};
+}
 
 export default Routes;
